@@ -169,7 +169,7 @@
 
 .round_box p {
     margin-top: 10px;
-    text-justify: inter-word;
+    text-align: justify;
 }
 
 .round_box p a {
