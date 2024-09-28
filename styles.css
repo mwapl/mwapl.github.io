@@ -160,11 +160,16 @@
 }
 
 .round_box h1 i {
-    align-items: center;   
+    vertical-align: middle;
+    margin-right: 25px; /* Adds space between icon and text */
+ 
 }
 
 .round_box h1 {
     font-size: 1.7rem;
+    display: flex;
+    align-items: center;
+    line-height: 1.2px;
 }
 
 .round_box p {
@@ -192,11 +197,15 @@
 }
 
 .round_box_uncolored h1 i {
-    align-items: center;   
+    vertical-align: middle;
+    margin-right: 30px; /* Adds space between icon and text */
+    font-size: 2.4rem;
 }
 
 .round_box_uncolored h1 {
     font-size: 2.5rem;
+    display: flex;
+    align-items: center;
 }
 
 .round_box_uncolored p {
