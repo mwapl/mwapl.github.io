@@ -448,10 +448,7 @@ img, .container {
         width: 150px; /* Reduce the width of the line */
     }
 
-    /* Ensure the layout remains responsive */
-    .navbar__menu.active {
-        height: auto; /* Allow more height if needed */
-    }
+
 }
 
 /* Further scaling for larger mobile devices (between 768px and 960px) */
