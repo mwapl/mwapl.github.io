@@ -36,12 +36,14 @@
     background: var(--color-light);
     display: flex;
     justify-content: space-between;
-    height: 60px;
+    flex-wrap: wrap;
+    height: 80px;
     z-index: 1;
     width: 100%;
     margin: 0 auto;
     padding: 0 0;
     position: relative;
+    padding: 0 10px;  /* Add some padding to prevent overflow */
 }
 
 #navbar__logo {
@@ -85,6 +87,8 @@
     align-items: center;
     list-style: none;
     text-align: center;
+    justify-content: center;
+    flex-wrap: wrap;  /* Items can stack vertically if needed */
 }
 
 .navbar__item {
@@ -107,6 +111,95 @@
     color: var(--color-red);
    transition: all 0.2s ease;
     
+}
+
+@media screen and (max-width: 960px) {
+    .navbar__container {
+	display: flex;
+	justify-content: space-between;
+	height: 60px;
+	z-index: 1;
+	width: 100%;
+	max-width: 1300px;
+	padding: 0;
+    }
+
+    #navbar__logo {
+	padding-left: 25px;
+    }
+
+    .navbar__menu {
+        width: 100%;  /* Make the menu take up the full width */
+	margin: 0;
+	position: absolute;
+	top: -1000px;
+	opacity: 0;
+	transition: all 0.5s ease;
+	height: 50vh;
+	z-index: -1;
+    }
+
+    .navbar__menu.active {
+	background: var(--color-light);
+	top: 100%;
+	opacity: 1;
+	transition: all 0.5s ease;
+	z-index: 99;
+	height: 50vh;
+	font-size: 1.6rem;
+    }
+
+    .navbar__toggle {
+	background: var(--color-light);
+    }
+    
+    .navbar__toggle .bar {
+	width: 25px;
+	height: 3px;
+	margin: 5px auto;
+	transition: all 0.3s ease-in-out;
+	background: var(--color-dark);
+	display: block;
+	cursor: pointer;
+    }
+
+    .navbar__item {
+	width: 100%;
+	font-size: 1.5rem;
+	height: 40px;
+    }
+
+    .navbar__links {
+	text-align: center;
+	padding: 2rem;
+	width: 100%;
+	display: table;
+    }
+
+    /* Adjust the otter icon size */
+    #otter {
+        font-size: 2.5rem;  /* Make the otter icon a bit smaller */
+    }
+
+    #mobile-menu {
+	position: absolute;
+	top: 20%;
+	right: 5%;
+	transform: translate(5%, 20%);
+    }
+
+
+    #mobile-menu.is-active .bar:nth-child(2) {
+	opacity: 0;
+    }
+
+    #mobile-menu.is-active .bar:nth-child(1) {
+	transform: translateY(8px) rotate(45deg);
+    }
+
+    #mobile-menu.is-active .bar:nth-child(3) {
+	transform: translateY(-8px) rotate(-45deg);
+    }
 }
 
 
