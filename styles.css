@@ -530,3 +530,9 @@ img, .container {
     }
     
 }
+
+@media screen and (max-width: 1600px) {
+    .round_box_uncolored {
+	margin-left: 5%;
+    }
+}
