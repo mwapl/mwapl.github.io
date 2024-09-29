@@ -525,3 +525,11 @@ img, .container {
         height: auto;
     }
 }
+
+@media screen and (max-width: 360px) {
+    /* Adjust the otter icon size */
+    #otter {
+        font-size: 1rem;  /* Make the otter icon a bit smaller */
+    }
+    
+}
