@@ -338,8 +338,13 @@ img, .container {
     justify-content: center;
     align-items: center;
     margin-right: 15%;
+    flex-direction: column;
+    color: var(--color-dark);
 }
 
+#randomImage {
+  border-radius: 20px;
+}
 /* wops.html specifics */
 
 .construction__img--container {
